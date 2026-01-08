@@ -4,44 +4,40 @@ import HomePage from '../pages/home';
 import AboutPage from '../pages/about';
 import ToolPage from '../pages/tools';
 import NotFoundPage from '../pages/error/404';
-import NavBar from '../components/unifyInjection/NavBar';
+import { Layout } from '../components/GlobalComponents';
 
 // 直接配置所有路由为顶级路由，并添加/bossHouse前缀
 const router = createBrowserRouter([
   {
     path: '/bossHouse',
     element: (
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Layout>
         <HomePage />
-        <NavBar />
-      </div>
+      </Layout>
     )
   },
   {
     path: '/bossHouse/home',
     element: (
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Layout>
         <HomePage />
-        <NavBar />
-      </div>
+      </Layout>
     )
   },
   {
     path: '/bossHouse/about',
     element: (
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Layout>
         <AboutPage />
-        <NavBar />
-      </div>
+      </Layout>
     )
   },
   {
     path: '/bossHouse/tools',
     element: (
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <Layout>
         <ToolPage />
-        <NavBar />
-      </div>
+      </Layout>
     )
   },
   {

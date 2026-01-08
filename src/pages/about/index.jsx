@@ -1,9 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../components/unifyInjection/Button';
+import { useGlobalComponents } from '../../components/GlobalComponents';
 
 const AboutPage = () => {
   const navigate = useNavigate();
+  const { Button } = useGlobalComponents();
   return (
     <div style={{ padding: 20 }}>
       <h1>About Page</h1>
@@ -27,7 +28,7 @@ const AboutPage = () => {
         <li>Styles - CSS and styling</li>
       </ul>
       <div style={{ marginTop: 30 }}>
-        <Button onClick={() => navigate('/')} variant="primary">Back to Home Page</Button>
+        <Button onClick={() => navigate('/bossHouse')} variant="primary">Back to Home Page</Button>
       </div>
     </div>
   );

@@ -2,12 +2,13 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { increment, decrement } from '../../store/counterSlice';
-import Button from '../../components/unifyInjection/Button';
+import { useGlobalComponents } from '../../components/GlobalComponents';
 
 const ToolPage = () => {
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { Button } = useGlobalComponents();
 
   return (
     <div style={{ padding: 20 }}>
