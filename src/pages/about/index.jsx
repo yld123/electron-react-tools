@@ -6,20 +6,20 @@ const AboutPage = () => {
   const navigate = useNavigate();
   const { Button } = useGlobalComponents();
   return (
-    <div style={{ padding: 20 }}>
-      <h1>About Page</h1>
-      <p>This is a modular React + Electron application built with:</p>
-      <ul style={{ marginTop: 10 }}>
+    <div className="p-5 md:p-6">
+      <h1 className="text-3xl font-bold mb-4">About Page</h1>
+      <p className="text-lg mb-3">This is a modular React + Electron application built with:</p>
+      <ul className="mt-2 list-disc list-inside space-y-1 text-lg">
         <li>React for UI components</li>
         <li>React Router for navigation</li>
         <li>Redux Toolkit for state management</li>
         <li>Electron for desktop application</li>
         <li>Webpack for bundling</li>
       </ul>
-      <p style={{ marginTop: 10 }}>
+      <p className="mt-4 text-lg">
         The application follows a modular architecture with separate directories for:
       </p>
-      <ul>
+      <ul className="mt-2 list-disc list-inside space-y-1 text-lg">
         <li>Pages - Main application screens</li>
         <li>Components - Reusable UI elements</li>
         <li>Store - Redux state management</li>
@@ -27,7 +27,7 @@ const AboutPage = () => {
         <li>Utils - Helper functions</li>
         <li>Styles - CSS and styling</li>
       </ul>
-      <div style={{ marginTop: 30 }}>
+      <div className="mt-8">
         <Button onClick={() => navigate('/bossHouse')} variant="primary">Back to Home Page</Button>
       </div>
     </div>

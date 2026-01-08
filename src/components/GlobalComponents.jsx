@@ -37,7 +37,7 @@ export { Button, NavBar };
 // 创建路由用的布局组件，用于包装页面组件并添加NavBar
 export const Layout = ({ children }) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="flex flex-col min-h-screen">
       {children}
       <NavBar />
     </div>

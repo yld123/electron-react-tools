@@ -11,19 +11,19 @@ const ToolPage = () => {
   const { Button } = useGlobalComponents();
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Home Page</h1>
-      <p>Welcome to our React + Electron application!</p>
-      <div style={{ marginTop: 20 }}>
-        <h2>Counter (Redux Example)</h2>
-        <p>Count: {count}</p>
-        <div style={{ marginTop: 10 }}>
-          <Button onClick={() => dispatch(increment())}>Increment</Button>
-          <Button onClick={() => dispatch(decrement())} variant="secondary" style={{ marginLeft: 10 }}>Decrement</Button>
+    <div className="p-5 md:p-6">
+      <h1 className="text-3xl font-bold mb-4">Tools Page</h1>
+      <p className="text-lg mb-6">Welcome to the Tools section of our application!</p>
+      <div className="mt-5 bg-gray-50 p-4 rounded-lg shadow-sm">
+        <h2 className="text-2xl font-semibold mb-3">Counter Tool</h2>
+        <p className="text-lg mb-4">Current Count: {count}</p>
+        <div className="mt-2 flex gap-3">
+          <Button onClick={() => dispatch(increment())} variant="success">Increment</Button>
+          <Button onClick={() => dispatch(decrement())} variant="danger">Decrement</Button>
         </div>
       </div>
-      <div style={{ marginTop: 30 }}>
-        <Button onClick={() => navigate('/about')} variant="primary">Go to About Page</Button>
+      <div className="mt-8">
+        <Button onClick={() => navigate('/bossHouse')} variant="primary">Back to Home Page</Button>
       </div>
     </div>
   );

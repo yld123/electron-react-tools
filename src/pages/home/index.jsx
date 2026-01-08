@@ -11,18 +11,18 @@ const HomePage = () => {
   const { Button } = useGlobalComponents();
 
   return (
-    <div style={{ padding: 20 }}>
-      <h1>Home Page</h1>
-      <p>Welcome to our React + Electron application!</p>
-      <div style={{ marginTop: 20 }}>
-        <h2>Counter (Redux Example)</h2>
-        <p>Count: {count}</p>
-        <div style={{ marginTop: 10 }}>
+    <div className="p-5 md:p-6">
+      <h1 className="text-3xl font-bold mb-4">Home Page</h1>
+      <p className="text-lg mb-6">Welcome to our React + Electron application!</p>
+      <div className="mt-5">
+        <h2 className="text-2xl font-semibold mb-3">Counter (Redux Example)</h2>
+        <p className="text-lg mb-4">Count: {count}</p>
+        <div className="mt-2 flex gap-3">
           <Button onClick={() => dispatch(increment())}>Increment</Button>
-          <Button onClick={() => dispatch(decrement())} variant="secondary" style={{ marginLeft: 10 }}>Decrement</Button>
+          <Button onClick={() => dispatch(decrement())} variant="secondary">Decrement</Button>
         </div>
       </div>
-      <div style={{ marginTop: 30 }}>
+      <div className="mt-8">
         <Button onClick={() => navigate('/about')} variant="primary">Go to About Page</Button>
       </div>
     </div>
