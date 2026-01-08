@@ -37,12 +37,14 @@ const NavBar = () => {
       </NavLink>
       <NavLink to="/bossHouse/tools" style={({ isActive }) => ({
         margin: '0 20px',
-        color: isActive ? 'blue' : 'black',
+        color: isActive ? 'red' : 'green',
         textDecoration: isActive ? 'underline' : 'none',
-        padding: '5px 10px',
-        fontSize: '16px',
+        padding: '10px 20px',
+        fontSize: '20px',
         fontWeight: 'bold',
-        display: 'block'
+        display: 'block',
+        backgroundColor: 'yellow',
+        borderRadius: '5px'
       })}>
         Tools
       </NavLink>
